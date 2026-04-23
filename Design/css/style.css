@@ -1,0 +1,82 @@
+/* Reset CSS */
+*{
+    margin:0px; /* Remove margin padrão */
+    padding: 0; /* Remove padding padrão */
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura total dos elementos */
+}
+
+/* Globais */
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna e legível */
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    color: #333; /* Cor do texto */
+}
+
+header {
+    background-color: #fff; /* Fundo branco */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o título */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave para UX */
+}
+
+header h1 {
+    color: #2c3e50; /* Uma cor mais sóbria */
+}
+/* Main - centralizando no meio da tela */
+main{
+    display: flex; /* Flexbox para centralizar os itens */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 80vh; /* Garante que o main ocupe pelo menos 80% da altura da tela */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Card */
+.product-card{
+    background-color: #fff; /* Fundo branco para o card */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    width: 250px; /* Largura fixa para o card */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para dar profundidade */
+    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+.product-card:hover{
+    transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.product-card img{
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do card */
+    border-radius: 5px; /* Bordas arredondadas para a imagem */
+    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+}
+
+.product-card h2{
+    font-size: 1.3em; /* Tamanho da fonte para o título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    color: #2c3e50;
+}
+
+.product-card .price{
+    display: block; /* Exibe o preço em uma nova linha */
+    font-size: 1.5rem; /* Tamanho da fonte para o preço */
+    color: #e74c3c; /* Cor vermelha para destacar o preço */
+    margin-bottom: 15px; /* Espaçamento abaixo do preço */
+}
+
+.product-card button{
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+.product-card button:hover{
+    background-color: #2980b9; /* Cor mais escura ao passar o mouse */
+}

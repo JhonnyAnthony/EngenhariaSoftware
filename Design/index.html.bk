@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body contenteditable="false">
+    <header>
+        <h1>Engenharia de Produto: O Ciclo do MVP</h1>
+        <nav>
+            <ul>
+                <li><a href="#conceitos">Conceitos</a></li>
+                <li><a href="#cadastro">Cadastro</a></li>
+                <li><a href="#midia">Midia</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="conceito">
+            <h2>1. Fundamentos de Design</h2>
+            <article>
+                <p>No desenvolvimento, o <mark>MVP</mark> pemite validar hipóteses com o mínimo de esforço.</p>
+                <figure>
+                    <picture>
+                        <source srcset="assets\mvp.png" media="(min-width: 80px)">
+                        <img src="assets\mvp.png"  alt="Diagrama mostrando o fluxo de um MVP" width="200">
+                    </picture>
+                    <figcaption>Figura 1: O Ciclo de aprendizado do usuário.</figcaption>
+                </figure>
+            </article>
+            <div>
+                <h3>Glossário Rápido</h3>
+                <span><strong>Affodance:</strong></span>
+                <span>Pistas visuais que indicam omo interagir com o objeto.</span>
+                <br>
+                <span><strong>Fricção:</strong></span>
+                <span>Obstácilos que impedem a fluidez da tarefa.</span>
+            </div>
+        </section>
+        <section id="cadastro">
+            <h2>2. Formulário Inteligente</h2>
+            <form autocomplete="on">
+                <label for="email">E-mail Corporativo:</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@empresa.com" required>
+                <!-- <br> -->
+                <label for="prioridade">Nível de Prioridade (mín. 1):</label>
+                <input list="number" id="prioridade" name="prioridade" min="1">
+                <!-- <br> -->
+                <label for="ferramenta">Ferramenta Benchmarch:</label>
+                <input list="ferramentas" id="ferramenta" name="ferramenta">
+                <datalist id="ferramentas">
+                    <option value="Figma"></option>
+                    <option value="Hotjar"></option>
+                    <option value="Google Analytics"></option>
+                </datalist>
+                <br><br>
+                <progress value="50" max="100">50%</progress>
+                <br>
+                <button type="submit">Enviar Dados:</button>
+            </form>
+        </section>
+        <section id="midia">
+            <h2>3. Recurso de Mídia</h2>
+            <audio controls src="assets/podcast_aula.mp3">Seu Navegador não suporta áudio nativo.</audio>
+            <video src="assets/demo_produto.mp4" controls width="300">
+                Seu Navegador não suporta vídeo nativo.
+                <a href="assets/demo_produto.mp4">Baixar vídeo</a>
+            </video>
+            <canvas id="grafico"> Espaço para gráfico via JS.</canvas>
+        </section>
+    </main>
+    <footer>
+        <p>Publicado em <time datetime="2026-04-03">Abril de 2026</time></p>
+        <a href="assets/mvp.png" download>Baixar Manual de UX</a>
+    </footer>
+</body>
+</html>
