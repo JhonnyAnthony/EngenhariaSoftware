@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SistemaBiblioteca
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.Clear(); // limpa a tela
+
+            Console.SetCursorPosition(10,5);   // posiciona o cursor
+            Console.WriteLine("Sistema de Biblioteca");   // imprime um texto
+
+            /*
+             Aluno aluno1 = new Aluno();
+             aluno1.matricula = 123;
+             aluno1.nome = "Ze Colmeia";
+             aluno1.nomeCurso = "Marketing";
+             aluno1.email = "zecolmeia@gmail.com";
+             aluno1.cpf = "123.456.789-00";
+             aluno1.telefone = "047 98867-8976";
+
+             Aluno aluno2 = new Aluno();
+             aluno2.matricula = 124;
+             aluno2.nome = "Catatau";
+             aluno2.email = "catatau98@gmail.com";
+             aluno2.cpf = "097.456.632-90";
+             aluno2.telefone = "047 99123-7812";
+            */
+
+
+            Aluno aluno1 = new Aluno(
+                123, 
+                "Ze Colmeia", 
+                "Marketing", 
+                "444", 
+                "zec@uol.com.br", 
+                "333"
+            );
+
+
+            Aluno aluno2 = new Aluno(124, "Catatau", "Psicologia", "555", "cata@uol.com.br", "777");
+
+
+
+            Console.SetCursorPosition(11, 7);
+            Console.WriteLine(aluno1.nome + " estuda " + aluno1.nomeCurso);
+            Console.SetCursorPosition(11, 8);
+            Console.WriteLine(aluno2.nome + " estuda " + aluno2.nomeCurso);
+           
+
+
+
+            Console.ReadKey();   // espera uma tecla qualquer ser acionada
+
+
+        }
+    }
+}
