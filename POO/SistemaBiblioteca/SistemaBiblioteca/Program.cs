@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaBiblioteca
+namespace LibrarySystem
 {
     internal class Program
     {
@@ -34,7 +34,7 @@ namespace SistemaBiblioteca
             */
 
 
-            Aluno aluno1 = new Aluno(
+            StudantModel aluno1 = new StudantModel(
                 123, 
                 "Ze Colmeia", 
                 "Marketing", 
@@ -44,7 +44,7 @@ namespace SistemaBiblioteca
             );
 
 
-            Aluno aluno2 = new Aluno(124, "Catatau", "Psicologia", "555", "cata@uol.com.br", "777");
+            StudantModel aluno2 = new StudantModel(124, "Catatau", "Psicologia", "555", "cata@uol.com.br", "777");
 
 
 

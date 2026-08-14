@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaBiblioteca
+namespace LibrarySystem
 {
-    internal class Aluno
+    internal class StudantModel
     {
         //
         // atributos / propriedades
@@ -23,7 +23,7 @@ namespace SistemaBiblioteca
         //
 
         // método construtor
-        public Aluno( int mat, string nom, string cur, string tel, string eml, string cpf )
+        public StudantModel(int mat, string nom, string cur, string tel, string eml, string cpf)
         {
             this.matricula = mat;
             this.nome = nom;

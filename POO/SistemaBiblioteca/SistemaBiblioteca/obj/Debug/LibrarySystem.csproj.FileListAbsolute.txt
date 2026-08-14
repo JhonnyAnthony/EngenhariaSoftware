@@ -1,0 +1,7 @@
+C:\Users\jhonny.souza\source\repos\EngenhariaSoftware\POO\SistemaBiblioteca\SistemaBiblioteca\bin\Debug\SistemaBiblioteca.exe.config
+C:\Users\jhonny.souza\source\repos\EngenhariaSoftware\POO\SistemaBiblioteca\SistemaBiblioteca\bin\Debug\SistemaBiblioteca.exe
+C:\Users\jhonny.souza\source\repos\EngenhariaSoftware\POO\SistemaBiblioteca\SistemaBiblioteca\bin\Debug\SistemaBiblioteca.pdb
+C:\Users\jhonny.souza\source\repos\EngenhariaSoftware\POO\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\LibrarySystem.csproj.AssemblyReference.cache
+C:\Users\jhonny.souza\source\repos\EngenhariaSoftware\POO\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\LibrarySystem.csproj.CoreCompileInputs.cache
+C:\Users\jhonny.souza\source\repos\EngenhariaSoftware\POO\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.exe
+C:\Users\jhonny.souza\source\repos\EngenhariaSoftware\POO\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.pdb
