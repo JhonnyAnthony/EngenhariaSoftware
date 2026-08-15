@@ -43,16 +43,38 @@ namespace LibrarySystem
                 "333"
             );
 
+            StudantModel aluno2 = new StudantModel(
+                1233,
+                "Jhonny",
+                "TI",
+                "234",
+                "jhonny@uol.com.br",
+                "1233"
+            );
 
-            StudantModel aluno2 = new StudantModel(124, "Catatau", "Psicologia", "555", "cata@uol.com.br", "777");
-
+            BookModel book1 = new BookModel(
+                "123",
+                "Homem Aranha", 
+                "Mary Janne",
+                "Fantasia", 
+                777
+            );
+            
+            BookModel book2 = new BookModel(
+                "1234",
+                "Homem Aranha 2",
+                "Mary Janne",
+                "Fantasia",
+                777
+            );
 
 
             Console.SetCursorPosition(11, 7);
             Console.WriteLine(aluno1.nome + " estuda " + aluno1.nomeCurso);
             Console.SetCursorPosition(11, 8);
-            Console.WriteLine(aluno2.nome + " estuda " + aluno2.nomeCurso);
-           
+            Console.WriteLine("Genero: " + book1.Genre);
+            //Console.WriteLine(book1.nome + " estuda " + aluno2.nomeCurso);
+
 
 
 

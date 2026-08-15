@@ -16,9 +16,10 @@ namespace LibrarySystem
 
 
         // método construtor (SEMPRE TEM QUE TER O MESMO NOME DA CLASSE)
-                            //Assinatura do Método Construtor
+        //TIPO //NOME    //Assinatura do Método Construtor
         public BookModel(string isbn,string title,string author,string genre,int page)
         {
+            //CORPO DO METODO CONSTRUTOR
             this.Isbn = isbn;
             this.Title = title;
             this.Author = author;
