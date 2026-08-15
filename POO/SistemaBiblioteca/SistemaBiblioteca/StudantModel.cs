@@ -18,9 +18,8 @@ namespace LibrarySystem
         public string telefone;
         public string email;
 
-        //
-        // operações / métodos
-        //
+        // propriedades
+
 
         // método construtor
         public StudantModel(int mat, string nom, string cur, string tel, string eml, string cpf)

@@ -33,7 +33,6 @@ namespace LibrarySystem
              aluno2.telefone = "047 99123-7812";
             */
 
-
             StudantModel aluno1 = new StudantModel(
                 123, 
                 "Ze Colmeia", 
@@ -65,14 +64,14 @@ namespace LibrarySystem
                 "Homem Aranha 2",
                 "Mary Janne",
                 "Fantasia",
-                777
+                -1
             );
 
 
             Console.SetCursorPosition(11, 7);
             Console.WriteLine(aluno1.nome + " estuda " + aluno1.nomeCurso);
             Console.SetCursorPosition(11, 8);
-            Console.WriteLine("Genero: " + book1.Genre);
+            Console.WriteLine("pAGINA: " + book2.Pages);
             //Console.WriteLine(book1.nome + " estuda " + aluno2.nomeCurso);
 
 
