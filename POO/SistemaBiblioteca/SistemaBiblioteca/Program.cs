@@ -10,13 +10,13 @@ namespace LibrarySystem
     {
         static void Main(string[] args)
         {
-
+            /*
             Console.Clear(); // limpa a tela
 
             Console.SetCursorPosition(10,5);   // posiciona o cursor
             Console.WriteLine("Sistema de Biblioteca");   // imprime um texto
 
-            /*
+
              Aluno aluno1 = new Aluno();
              aluno1.matricula = 123;
              aluno1.nome = "Ze Colmeia";
@@ -31,7 +31,7 @@ namespace LibrarySystem
              aluno2.email = "catatau98@gmail.com";
              aluno2.cpf = "097.456.632-90";
              aluno2.telefone = "047 99123-7812";
-            */
+            
 
             StudantModel aluno1 = new StudantModel(
                 123, 
@@ -76,7 +76,15 @@ namespace LibrarySystem
 
 
 
+            */
+            Screen myscreen = new Screen(ConsoleColor.Magenta,ConsoleColor.White);
+            myscreen.SetupScreen();
 
+            myscreen.FrameAssembly(5, 3, 30, 15);
+
+            Console.SetCursorPosition(15, 4);
+            Console.WriteLine("Hello World!");
+            
             Console.ReadKey();   // espera uma tecla qualquer ser acionada
 
 
