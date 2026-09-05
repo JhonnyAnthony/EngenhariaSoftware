@@ -43,8 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Book\BookController.cs" />
+    <Compile Include="Book\BookModel.cs" />
+    <Compile Include="Book\BookView.cs" />
+    <Compile Include="Loan\LoanController.cs" />
+    <Compile Include="Loan\LoanModel.cs" />
+    <Compile Include="Loan\LoanView.cs" />
+    <Compile Include="Studant\StudantController.cs" />
+    <Compile Include="Studant\StudantModel.cs" />
+    <Compile Include="Studant\StudantView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Screen\Screen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
