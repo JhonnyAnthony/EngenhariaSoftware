@@ -13,20 +13,17 @@ int main(void){
     int v[n];
     printf("Digite os elementos do vetor:\n");
     for(int i = 0;i < n; i++){
-        // [10,20,30]
         scanf("%i", &v[i]);
     }
-    if (n)
-
-    printf("%i\n",maiorValor(v,n));
-     
+    printf("O maior valor é:%i\n",maiorValor(v,n));
     return 0;
 }
 
 int maiorValor(int v[], int n) { 
     if (n == 0) return 0;
-
-    return maiorValor(v,n);
-        
-
+    else if (v[n - 1] > maiorValor(v, n - 1)) {
+        return v[n - 1];
+    }
+    return maiorValor(v, n - 1);
+    
 } 
