@@ -1,50 +1,49 @@
-﻿using System;
+﻿using Library;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Library
+namespace Biblioteca
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //MVC - Model , View , Controller
-            //Model - Dados
-            //View - Tela
-            //Controller - Regras e Sequencia de Tarefas
+            Screen tela = new Screen(ConsoleColor.Magenta, ConsoleColor.Gray);
+            tela.ConfigureScreen();
 
-            //EXEMPLOS:
-            //Cada funcionalidade do sistema terá uma **entidade de negocio** Model, View e Controller
-            //LivroModel, LivroView, LivroController
-            //AlunoModel, AlunoView, AlunoController
-            //Classes Auxiliares
-            //Tela
-            Screen myScreen = new Screen(ConsoleColor.Magenta, ConsoleColor.Gray);
-            myScreen.ConfigureScreen();
-            BookController bookController = new BookController();
+            BookController livroController = new BookController();
+            StudantController alunoController = new StudantController();
 
-            int op;
+            List<string> opcoes = new List<string>();
+            opcoes.Add(" 1 - Livros      ");
+            opcoes.Add(" 2 - Alunos      ");
+            opcoes.Add(" 3 - Empréstimos ");
+            opcoes.Add(" 4 - Relatórios  ");
+            opcoes.Add(" 0 - Sair        ");
 
-            List<string> optionsMenu = new List<string>();
-            optionsMenu.Add("1  -  Books      ");
-            optionsMenu.Add("2  -  Studants   ");
-            optionsMenu.Add("3  -  Loans      ");
-            optionsMenu.Add("4  -  Relatórios ");
-            optionsMenu.Add("0  -  Sair       ");
+            string opcao;
 
             while (true)
             {
-                myScreen.BuildScreen(0, 0, 79, 24, "Library Sistem");
-                op = int.Parse(myScreen.ShowMenu(optionsMenu, 2, 2));
+                tela.BuildScreen(0, 0, 79, 24, "Sistema de Biblioteca");
+                opcao = tela.ShowMenu(opcoes, 2, 2);
 
-                if (op == 0)
+                if (opcao == "0") break;
+                else if (opcao == "1") livroController.ExecCrud();
+                else if (opcao == "2") alunoController.ExecCrud();
+                else
                 {
-                    Console.WriteLine("Saindo do sistema...");
-                    break;
-                }
-                else if (op == 1) { 
-                    bookController.RunCRUD();
+                    tela.Centralize("Opção inválida! Acione uma tecla.",
+                        1, 78, 23);
+                    Console.ReadKey();
                 }
             }
+
+            Console.Clear();
+            Console.WriteLine("Adeus...");
         }
     }
 }

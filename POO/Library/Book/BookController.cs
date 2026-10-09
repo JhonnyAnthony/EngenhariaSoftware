@@ -9,24 +9,31 @@ namespace Library
     internal class BookController
     {
         // atributos
-        // DECLARAÇÃO DE ATRIBUTOS
-        private BookModel _bookModel;
+        private List<BookModel> _colecaoLivros;
+
+        private BookModel _livro;
         private BookView _bookView;
-        private List<BookModel> _bookModels;
+
+        private int _posicao;
 
         // construtor
         public BookController()
         {
-            // INSTANCIAÇÃO DE ATRIBUTOS
-            this._bookModel     = new BookModel();
-            this._bookView      = new BookView();
-            this._bookModels    = new List<BookModel>();
+            this._bookView = new BookView();
+            this._livro = new BookModel();
+
+            this._colecaoLivros = new List<BookModel>();
+            // adiciona 1 livro na coleção para testarmos a consulta posteriormente
+            this._colecaoLivros.Add(
+                new BookModel("123", "Faca", "Jo Nesbo", "Policial", 450)
+            );
         }
 
-        // métodos
-        // orquestrador do CRUD
-        public void RunCRUD() {
-            this._bookView.BuildScreen(10, 5, "Cadastro");
+        public void ExecCrud()
+        {
+            this._bookView.ShowForm();
+            this._livro = this._bookView.JoinData("PK");
         }
+
     }
 }

@@ -16,6 +16,7 @@ namespace Library
         private string _title;
         private string _author;
         private string _gender;
+        private int _paginas;
 
         // propriedades (get/set)
         // PADRÃO PARA PROPRIEDADES
@@ -26,15 +27,17 @@ namespace Library
         public string Title { get => _title; set => _title = value; }
         public string Author { get => _author; set => _author = value; }
         public string Gender { get => _gender; set => _gender = value; }
+        public int Paginas { get => _paginas; set => _paginas = value; }
 
         // construtores
 
-        public BookModel(string id, string title, string author, string gender)
+        public BookModel(string id, string title, string author, string gender,int paginas)
         {
             this.Id = id;
             this.Title = title;
             this.Author = author;
             this.Gender = gender;
+            this.Paginas = paginas;
         }
 
         public BookModel() {
@@ -42,6 +45,8 @@ namespace Library
             this.Title = "";
             this.Author = "";
             this.Gender = "";
+            this.Paginas = 0;
+
         }
     }
 }
