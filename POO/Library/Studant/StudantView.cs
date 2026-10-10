@@ -9,24 +9,24 @@ namespace Library
     internal class StudantView
     {
         // atributos
-        private int _colIni, _linIni, _colFin, _linFin, _colDados, _linDados;
+        private int _colIni, _linIni, _colFin, _linFim, _colDados, _linDados;
         private List<string> _campos;
 
         // construtor
         public StudantView()
         {
             this._campos = new List<string>();
-            this._campos.Add("Matrícula :");
-            this._campos.Add("Nome      :");
-            this._campos.Add("Email     :");
-            this._campos.Add("Telefone  :");
+            this._campos.Add("Matrícula : ");
+            this._campos.Add("Nome      : ");
+            this._campos.Add("Email     : ");
+            this._campos.Add("Telefone  : ");
 
             this._colIni = 18;
             this._linIni = 4;
             this._colFin = _colIni + this._campos[0].Length + 1 + 30;
             // +1 para colocar o traçado vertical direito depois dos :
             // +30 para ter espaço para o usuário digitar os dados
-            this._linFin = _linIni + this._campos.Count + 1 + 2;
+            this._linFim = _linIni + this._campos.Count + 1 + 2;
             // +1 para colocar o traçado horizontal na linha após o último campo
             // +2 para podermos usar um Titulo e um espaço para perguntas
             this._colDados = this._colIni + this._campos[0].Length + 1;
@@ -39,7 +39,7 @@ namespace Library
             Screen Screen = new Screen();
             Screen.BuildScreen(
                 this._colIni, this._linIni,
-                this._colFin, this._linFin,
+                this._colFin, this._linFim,
                 "Cadastro de Alunos"
             );
 
@@ -64,27 +64,38 @@ namespace Library
         }
 
 
-        public StudantModel JoinData(string qual)
-        {
-            StudantModel obj = new StudantModel();
-
-
+        public void JoinData(string qual, StudantModel studant)
+        { 
             if (qual == "PK")
             {
                 // pergunta a chave primária (código)
                 Console.SetCursorPosition(this._colDados, this._linDados);
-                obj.Matricula = Console.ReadLine();
+                studant.Matricula = Console.ReadLine();
             }
-            else
+            else if (qual == "DT")
             {
-                //
                 // pergunta todos os outros dados
-                //
-            }
+                Console.SetCursorPosition(this._colDados, this._linDados+1);
+                studant.Nome        = Console.ReadLine();
 
-            return obj;
+                Console.SetCursorPosition(this._colDados, this._linDados+2);
+                studant.Email       = Console.ReadLine();
+
+                Console.SetCursorPosition(this._colDados, this._linDados+3);
+                studant.Telefone    = Console.ReadLine();
+
+            }
         }
 
+        public string Question(string question)
+        {
+            string answer = "";
+            Console.SetCursorPosition(this._colIni + 1, this._linFim - 1);
+            Console.Write(question);
+            answer = Console.ReadLine();
+
+            return answer.ToUpper();
+        }
 
     }
 }
