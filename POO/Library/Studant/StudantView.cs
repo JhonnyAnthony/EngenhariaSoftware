@@ -21,8 +21,8 @@ namespace Library
             this._campos.Add("Email     : ");
             this._campos.Add("Telefone  : ");
 
-            this._colIni = 18;
-            this._linIni = 4;
+            this._colIni = 15;
+            this._linIni = 5;
             this._colFin = _colIni + this._campos[0].Length + 1 + 30;
             // +1 para colocar o traçado vertical direito depois dos :
             // +30 para ter espaço para o usuário digitar os dados
@@ -63,7 +63,6 @@ namespace Library
             */
         }
 
-
         public void JoinData(string qual, StudantModel studant)
         { 
             if (qual == "PK")
@@ -74,6 +73,11 @@ namespace Library
             }
             else if (qual == "DT")
             {
+
+                Screen screen = new Screen();
+                screen.ClearArea(this._colDados, this._linDados + 1, this._colFin - 1, this._linFim - 2);
+                    
+                
                 // pergunta todos os outros dados
                 Console.SetCursorPosition(this._colDados, this._linDados+1);
                 studant.Nome        = Console.ReadLine();
@@ -87,6 +91,18 @@ namespace Library
             }
         }
 
+        public void ShowData(StudantModel studant)
+        {
+            Console.SetCursorPosition(this._colDados, this._linDados + 1);
+            Console.Write(studant.Nome);
+
+            Console.SetCursorPosition(this._colDados, this._linDados + 2);
+            Console.Write(studant.Email);
+
+            Console.SetCursorPosition(this._colDados, this._linDados + 3);
+            Console.Write(studant.Telefone);
+            Console.ReadKey();
+        }
         public string Question(string question)
         {
             string answer = "";

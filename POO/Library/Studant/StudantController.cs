@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -77,18 +78,37 @@ namespace Library
             }
             else 
             {
-                Console.SetCursorPosition(20, 20);
-                Console.Write("É OS GURI");
-                Console.ReadKey();
-                //MOSTRA OS DADOS DO ALUNO, PERGUNTA SE DESEJA ALTERAR,EXCLUIR,VOLTAR
+                //MOSTRA OS DADOS DO ALUNO
+                view.ShowData(this._colecaoAlunos[this._posicao]);
+                //PERGUNTA SE DESEJA ALTERAR,EXCLUIR,VOLTAR
+                answer = view.Question("Deseja Alterar/Excluir/Volta [A/E/V]:");
                 // SE ALTERAR 
+                if (answer == "A")
+                {
+                    //if ()
+                    view.JoinData("DT", studant);
+
                     //PERGUNTA OS NOVOS DADOS 
+                    answer = view.Question("Confirma Alteração (S/N): ");
                     //PERGUNTA SE CONFIRMA A ALTERACAO
-                    // SE SIM
+                    if (answer == "S")
+                        // SE SIM
+                    {
                         // ATUALIZA OS DADOS DO ALUNO NA COLECAO
+                        this._colecaoAlunos[this._posicao]= studant;
+                        
+                    }
+                }
+
+
                 // SE EXCUIR
+                else if (answer == "E")
+                {
                     // PERGUNTA SE CONFIRMA EXCLUSAO
-                // SE SIM APAGA O ALUNO DA COLECAO
+                    answer = view.Question("Confirma Exclusão (S/N)? ");
+                    // SE SIM, APAGA O ALUNO DA COLECAO
+                    if (answer == "S") { this._colecaoAlunos.RemoveAt(this._posicao);}
+                }
             }
 
 
